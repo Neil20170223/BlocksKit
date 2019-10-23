@@ -125,13 +125,11 @@
 		DBFB0A34184DC83200F37EEE /* UIGestureRecognizer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFB0A27184DC83200F37EEE /* UIGestureRecognizer+BlocksKit.m */; };
 		DBFB0A36184DC83200F37EEE /* UITextField+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFB0A2B184DC83200F37EEE /* UITextField+BlocksKit.m */; };
 		DBFB0A37184DC83200F37EEE /* UIView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFB0A2D184DC83200F37EEE /* UIView+BlocksKit.m */; };
-		DBFB0A38184DC83200F37EEE /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFB0A2F184DC83200F37EEE /* UIWebView+BlocksKit.m */; };
 		DBFB0A3B184DC83C00F37EEE /* UIBarButtonItem+BlocksKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBFB0A22184DC83200F37EEE /* UIBarButtonItem+BlocksKit.h */; };
 		DBFB0A3C184DC83C00F37EEE /* UIControl+BlocksKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBFB0A24184DC83200F37EEE /* UIControl+BlocksKit.h */; };
 		DBFB0A3D184DC83C00F37EEE /* UIGestureRecognizer+BlocksKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBFB0A26184DC83200F37EEE /* UIGestureRecognizer+BlocksKit.h */; };
 		DBFB0A3F184DC83C00F37EEE /* UITextField+BlocksKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBFB0A2A184DC83200F37EEE /* UITextField+BlocksKit.h */; };
 		DBFB0A40184DC83C00F37EEE /* UIView+BlocksKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBFB0A2C184DC83200F37EEE /* UIView+BlocksKit.h */; };
-		DBFB0A41184DC83C00F37EEE /* UIWebView+BlocksKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DBFB0A2E184DC83200F37EEE /* UIWebView+BlocksKit.h */; };
 		DBFB0A88184DCBCC00F37EEE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFB092D184DC36400F37EEE /* Cocoa.framework */; };
 		DBFB0ABD184DCC9400F37EEE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBFB0AB7184DCC9400F37EEE /* MainMenu.xib */; };
 		DBFB0ABE184DCC9400F37EEE /* BKApp.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFB0ABA184DCC9400F37EEE /* BKApp.m */; };
@@ -162,7 +160,6 @@
 		DBFB0B14184DCD6200F37EEE /* NSTimerBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFB0AF1184DCD6200F37EEE /* NSTimerBlocksKitTest.m */; };
 		DBFB0B18184DCD6200F37EEE /* UIControlBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFB0AF9184DCD6200F37EEE /* UIControlBlocksKitTest.m */; };
 		DBFB0B19184DCD6200F37EEE /* UITextFieldBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFB0AFB184DCD6200F37EEE /* UITextFieldBlocksKitTest.m */; };
-		DBFB0B1A184DCD6200F37EEE /* UIWebViewBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFB0AFD184DCD6200F37EEE /* UIWebViewBlocksKitTest.m */; };
 		DBFB0B1D184DCD9C00F37EEE /* A2BlockDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFB0AC5184DCD6200F37EEE /* A2BlockDelegateTests.m */; };
 		DBFB0B1E184DCD9C00F37EEE /* A2BlockInvocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFB0AC7184DCD6200F37EEE /* A2BlockInvocationTests.m */; };
 		DBFB0B1F184DCD9C00F37EEE /* A2DynamicDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFB0AC9184DCD6200F37EEE /* A2DynamicDelegateTests.m */; };
@@ -222,7 +219,6 @@
 				DBFB0A3D184DC83C00F37EEE /* UIGestureRecognizer+BlocksKit.h in CopyFiles */,
 				DBFB0A3F184DC83C00F37EEE /* UITextField+BlocksKit.h in CopyFiles */,
 				DBFB0A40184DC83C00F37EEE /* UIView+BlocksKit.h in CopyFiles */,
-				DBFB0A41184DC83C00F37EEE /* UIWebView+BlocksKit.h in CopyFiles */,
 				DBFB0A1B184DC82900F37EEE /* MFMailComposeViewController+BlocksKit.h in CopyFiles */,
 				DBFB0A1C184DC82900F37EEE /* MFMessageComposeViewController+BlocksKit.h in CopyFiles */,
 				DBFB0A0E184DC7FB00F37EEE /* A2BlockInvocation.h in CopyFiles */,
@@ -352,8 +348,6 @@
 		DBFB0A2B184DC83200F37EEE /* UITextField+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BlocksKit.m"; sourceTree = "<group>"; };
 		DBFB0A2C184DC83200F37EEE /* UIView+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlocksKit.h"; sourceTree = "<group>"; };
 		DBFB0A2D184DC83200F37EEE /* UIView+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlocksKit.m"; sourceTree = "<group>"; };
-		DBFB0A2E184DC83200F37EEE /* UIWebView+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+BlocksKit.h"; sourceTree = "<group>"; };
-		DBFB0A2F184DC83200F37EEE /* UIWebView+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+BlocksKit.m"; sourceTree = "<group>"; };
 		DBFB0A42184DC84F00F37EEE /* MacBundledFramework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MacBundledFramework.xcconfig; sourceTree = "<group>"; };
 		DBFB0A87184DCBCC00F37EEE /* BlocksKit Mac Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlocksKit Mac Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFB0AB8184DCC9400F37EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -385,7 +379,6 @@
 		DBFB0AF1184DCD6200F37EEE /* NSTimerBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerBlocksKitTest.m; sourceTree = "<group>"; };
 		DBFB0AF9184DCD6200F37EEE /* UIControlBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControlBlocksKitTest.m; sourceTree = "<group>"; };
 		DBFB0AFB184DCD6200F37EEE /* UITextFieldBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldBlocksKitTest.m; sourceTree = "<group>"; };
-		DBFB0AFD184DCD6200F37EEE /* UIWebViewBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewBlocksKitTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -696,8 +689,6 @@
 				DBFB0A2B184DC83200F37EEE /* UITextField+BlocksKit.m */,
 				DBFB0A2C184DC83200F37EEE /* UIView+BlocksKit.h */,
 				DBFB0A2D184DC83200F37EEE /* UIView+BlocksKit.m */,
-				DBFB0A2E184DC83200F37EEE /* UIWebView+BlocksKit.h */,
-				DBFB0A2F184DC83200F37EEE /* UIWebView+BlocksKit.m */,
 				2BB8A49A18BE7927006AF0F6 /* UIImagePickerController+BlocksKit.h */,
 				2BB8A49B18BE7927006AF0F6 /* UIImagePickerController+BlocksKit.m */,
 			);
@@ -721,7 +712,6 @@
 			children = (
 				DBFB0AF9184DCD6200F37EEE /* UIControlBlocksKitTest.m */,
 				DBFB0AFB184DCD6200F37EEE /* UITextFieldBlocksKitTest.m */,
-				DBFB0AFD184DCD6200F37EEE /* UIWebViewBlocksKitTest.m */,
 				2BB8A49418BE7740006AF0F6 /* UIImagePickerControllerBlocksKitTest.m */,
 			);
 			name = UIKit;
@@ -991,7 +981,6 @@
 				DBFB09BD184DC7B000F37EEE /* NSMutableDictionary+BlocksKit.m in Sources */,
 				DBFB09C0184DC7B000F37EEE /* NSMutableIndexSet+BlocksKit.m in Sources */,
 				DBFB09C9184DC7B000F37EEE /* NSObject+BKAssociatedObjects.m in Sources */,
-				DBFB0A38184DC83200F37EEE /* UIWebView+BlocksKit.m in Sources */,
 				DBFB0A33184DC83200F37EEE /* UIControl+BlocksKit.m in Sources */,
 				DBFB09B7184DC7B000F37EEE /* NSInvocation+BlocksKit.m in Sources */,
 				DBFB0A32184DC83200F37EEE /* UIBarButtonItem+BlocksKit.m in Sources */,
@@ -1028,7 +1017,6 @@
 				DBFB0B13184DCD6200F37EEE /* NSSetBlocksKitTest.m in Sources */,
 				DBFB0B08184DCD6200F37EEE /* NSIndexSetBlocksKitTest.m in Sources */,
 				DBFB0B14184DCD6200F37EEE /* NSTimerBlocksKitTest.m in Sources */,
-				DBFB0B1A184DCD6200F37EEE /* UIWebViewBlocksKitTest.m in Sources */,
 				DBFB0B0E184DCD6200F37EEE /* NSMutableSetBlocksKitTest.m in Sources */,
 				DBFB0B11184DCD6200F37EEE /* NSObjectBlocksKitTest.m in Sources */,
 				DBE126DA184DDD8F0023AFAD /* A2DynamicTestClasses.m in Sources */,
