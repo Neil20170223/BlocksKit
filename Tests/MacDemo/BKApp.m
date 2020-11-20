@@ -42,28 +42,6 @@
 		? 	[obj.tv  reloadData], [obj.tv.enclosingScrollView.documentView scrollPoint:NSMakePoint(0,10000)]
 		: 	[obj.tmr invalidate]; // if displayCt == count of dicts in "crayon" array, "invalidate" timer
 	}];
-
-#pragma mark - Dynamic DataSource
-
-	// assign/instantiate A2DynamicDelegate from a tableView's dynamicDataSource property (via BlocksKit's magic!)
-	_ddSrc = _tv.bk_dynamicDataSource;
-
-	// The 2 required <NSTableViewDataSource> methods we will dynamically "delegate".
-	SEL numberOfRowsMethod 			 = @selector(numberOfRowsInTableView:),
-		 objectValueForColRowMethod = @selector(tableView:objectValueForTableColumn:row:);
-
-	// Our "block implementations" variable with method signatures that match the 2 tableView datasource methods above.
-	NSInteger  (^numberOfRowsBlock)(NSTableView*) 								  = ^NSInteger(NSTableView*tv){ return _displayCt; };
-	id (^objectValueForColRowBlock)(NSTableView*,NSTableColumn*,NSInteger) = ^id(NSTableView*tv,NSTableColumn*tc,NSInteger row) {
-		// Here we access the array of dictionaries we saved to "self", returning the appropriate "objectValueForTableColumn:row:"
-		return [self bk_associatedValueForKey:@"assocCryns"][row][[tv.tableColumns indexOfObject:tc] ? @"color" : @"name"];
-	};
-	// Tell A2DynamicDelegate to implement the datasource method with the block we just defined. (these populate the table!).
-	[_ddSrc implementMethod:numberOfRowsMethod 			withBlock:			numberOfRowsBlock];
-	[_ddSrc implementMethod:objectValueForColRowMethod withBlock:objectValueForColRowBlock];
-
-	// set the A2DynamicDelegate as the IBOutlet table property's datasource. Requires a cast to id<NSTableViewDataSource> protocol.
-	_tv.dataSource	= (id<NSTableViewDataSource>)_ddSrc;
 }
 
 - (IBAction)reset:(id)sender { self.displayCt = 0; } /* Reset Button to reset the action */							@end
