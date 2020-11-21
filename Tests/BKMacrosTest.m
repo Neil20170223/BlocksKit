@@ -9,6 +9,7 @@
 #import <BlocksKit/BKMacros.h>
 
 @interface BKMacrosTest : XCTestCase
+
 @end
 
 @implementation BKMacrosTest {
