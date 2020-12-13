@@ -48,7 +48,7 @@ static const void *BKControlHandlersKey = &BKControlHandlersKey;
 
 @implementation UIControl (BlocksKit)
 
-- (void)bk_addEventHandler:(void (^)(id sender))handler forControlEvents:(UIControlEvents)controlEvents
+- (void)bk_addEventHandler:(void (^)(__kindof UIControl *))handler forControlEvents:(UIControlEvents)controlEvents
 {
 	NSParameterAssert(handler);
 	

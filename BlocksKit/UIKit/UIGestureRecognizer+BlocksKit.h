@@ -40,6 +40,8 @@
  to use the arguments provided to the block.
  */
 
+typedef void (^BK_UIGestureRecognizerHandler)(__kindof UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location);
+
 @interface UIGestureRecognizer (BlocksKit)
 
 /** An autoreleased gesture recognizer that will, on firing, call
@@ -49,7 +51,8 @@
  @param block The block which handles an executed gesture.
  @param delay A number of seconds after which the block will fire.
  */
-+ (id)bk_recognizerWithHandler:(void (^)(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location))block delay:(NSTimeInterval)delay;
++ (id)bk_recognizerWithHandler:(BK_UIGestureRecognizerHandler)block
+						 delay:(NSTimeInterval)delay;
 
 /** Initializes an allocated gesture recognizer that will call the given block
  after a given delay.
@@ -60,7 +63,8 @@
  @param block The block which handles an executed gesture.
  @param delay A number of seconds after which the block will fire.
  */
-- (id)bk_initWithHandler:(void (^)(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location))block delay:(NSTimeInterval)delay NS_REPLACES_RECEIVER;
+- (id)bk_initWithHandler:(BK_UIGestureRecognizerHandler)block
+				   delay:(NSTimeInterval)delay NS_REPLACES_RECEIVER;
 
 /** An autoreleased gesture recognizer that will call the given block.
  
@@ -71,7 +75,7 @@
  subclass, or `nil`.
  @param block The block which handles an executed gesture.
  */
-+ (id)bk_recognizerWithHandler:(void (^)(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location))block;
++ (id)bk_recognizerWithHandler:(BK_UIGestureRecognizerHandler)block;
 
 /** Initializes an allocated gesture recognizer that will call the given block.
  
@@ -80,12 +84,12 @@
  @return An initialized instance of a concrete UIGestureRecognizer subclass or `nil`.
  @param block The block which handles an executed gesture.
  */
-- (id)bk_initWithHandler:(void (^)(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location))block NS_REPLACES_RECEIVER;
+- (id)bk_initWithHandler:(BK_UIGestureRecognizerHandler)block NS_REPLACES_RECEIVER;
 
 /** Allows the block that will be fired by the gesture recognizer
  to be modified after the fact.
  */
-@property (nonatomic, copy, setter = bk_setHandler:) void (^bk_handler)(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location);
+@property (nonatomic, copy, setter = bk_setHandler:) BK_UIGestureRecognizerHandler bk_handler;
 
 /** Allows the length of the delay after which the gesture
  recognizer will be fired to modify. */

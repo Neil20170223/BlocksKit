@@ -18,14 +18,14 @@
 
  @see NSOrderedSet(BlocksKit)
  */
-@interface NSMutableOrderedSet (BlocksKit)
+@interface NSMutableOrderedSet<ObjectType> (BlocksKit)
 
 /** Filters a mutable ordered set to the objects matching the block.
 
  @param block A single-argument, BOOL-returning code block.
  @see <NSOrderedSet(BlocksKit)>bk_reject:
  */
-- (void)bk_performSelect:(BOOL (^)(id obj))block;
+- (void)bk_performSelect:(BOOL (^)(ObjectType obj))block;
 
 /** Filters a mutable ordered set to all objects but the ones matching the
  block, the logical inverse to bk_select:.
@@ -33,7 +33,7 @@
  @param block A single-argument, BOOL-returning code block.
  @see <NSOrderedSet(BlocksKit)>bk_select:
  */
-- (void)bk_performReject:(BOOL (^)(id obj))block;
+- (void)bk_performReject:(BOOL (^)(ObjectType obj))block;
 
 /** Transform the objects in the ordered set to the results of the block.
 
@@ -45,6 +45,6 @@
  @param block A single-argument, object-returning code block.
  @see <NSOrderedSet(BlocksKit)>bk_map:
  */
-- (void)bk_performMap:(id (^)(id obj))block;
+- (void)bk_performMap:(id (^)(ObjectType obj))block;
 
 @end

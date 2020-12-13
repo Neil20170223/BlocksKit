@@ -16,7 +16,8 @@ static const void *BKBarButtonItemBlockKey = &BKBarButtonItemBlockKey;
 
 @implementation UIBarButtonItem (BlocksKit)
 
-- (id)bk_initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem handler:(void (^)(id sender))action
+- (id)bk_initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem
+							 handler:(void (^)(__kindof UIBarButtonItem *sender))action
 {
 	self = [self initWithBarButtonSystemItem:systemItem target:self action:@selector(bk_handleAction:)];
 	if (!self) return nil;
@@ -26,7 +27,9 @@ static const void *BKBarButtonItemBlockKey = &BKBarButtonItemBlockKey;
 	return self;
 }
 
-- (id)bk_initWithImage:(UIImage *)image style:(UIBarButtonItemStyle)style handler:(void (^)(id sender))action
+- (id)bk_initWithImage:(UIImage *)image
+				 style:(UIBarButtonItemStyle)style
+			   handler:(void (^)(__kindof UIBarButtonItem *sender))action
 {
 	self = [self initWithImage:image style:style target:self action:@selector(bk_handleAction:)];
 	if (!self) return nil;
@@ -36,9 +39,15 @@ static const void *BKBarButtonItemBlockKey = &BKBarButtonItemBlockKey;
 	return self;
 }
 
-- (id)bk_initWithImage:(UIImage *)image landscapeImagePhone:(UIImage *)landscapeImagePhone style:(UIBarButtonItemStyle)style handler:(void (^)(id sender))action
+- (id)bk_initWithImage:(UIImage *)image
+   landscapeImagePhone:(UIImage *)landscapeImagePhone
+				 style:(UIBarButtonItemStyle)style
+			   handler:(void (^)(__kindof UIBarButtonItem *sender))action
 {
-	self = [self initWithImage:image landscapeImagePhone:landscapeImagePhone style:style target:self action:@selector(bk_handleAction:)];
+	self = [self initWithImage:image landscapeImagePhone:landscapeImagePhone
+						 style:style
+						target:self
+						action:@selector(bk_handleAction:)];
 	if (!self) return nil;
 
 	objc_setAssociatedObject(self, BKBarButtonItemBlockKey, action, OBJC_ASSOCIATION_COPY_NONATOMIC);
@@ -46,7 +55,9 @@ static const void *BKBarButtonItemBlockKey = &BKBarButtonItemBlockKey;
 	return self;
 }
 
-- (id)bk_initWithTitle:(NSString *)title style:(UIBarButtonItemStyle)style handler:(void (^)(id sender))action
+- (id)bk_initWithTitle:(NSString *)title
+				 style:(UIBarButtonItemStyle)style
+			   handler:(void (^)(__kindof UIBarButtonItem *sender))action
 {
 	self = [self initWithTitle:title style:style target:self action:@selector(bk_handleAction:)];
 	if (!self) return nil;
